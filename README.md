@@ -8,12 +8,12 @@ Full Stack React js CRUD with Asp.Net Core Web
 
  # Step By Step Explanation
 
- Video Tutorial : https://youtu.be/xxxxx
+ Video Tutorial : https://youtu.be/NemyDIUcC64
  
 
  
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=xxxxxxx
-" target="_blank"><img src="http://img.youtube.com/vi/xxxxxx/0.jpg" 
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=NemyDIUcC64
+" target="_blank"><img src="http://img.youtube.com/vi/NemyDIUcC64/0.jpg" 
 alt="Video Tutorial for Complete React CRUD with Asp.Net Core Web API" width="500" height="400" border="10" /></a>
 
 
