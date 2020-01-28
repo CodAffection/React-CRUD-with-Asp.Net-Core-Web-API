@@ -1,5 +1,3 @@
-Video Tutorial On Next Monday
-
 # React-CRUD-with-Asp.Net-Core-Web-API
 Full Stack React js CRUD with Asp.Net Core Web
 
