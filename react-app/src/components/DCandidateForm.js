@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Grid, TextField, withStyles, FormControl, InputLabel, Select, MenuItem, Button, FormHelperText } from "@material-ui/core";
 import useForm from "./useForm";
 import { connect } from "react-redux";
-import * as actions from "../actions/dCandidate";
+import * as actions from "../store/actions";
 import { useToasts } from "react-toast-notifications";
 
 const styles = theme => ({

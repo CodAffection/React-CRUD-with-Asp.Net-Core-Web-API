@@ -1,13 +1,9 @@
-import api from "./api";
+import * as actionTypes from './actionTypes';
 
-export const ACTION_TYPES = {
-    CREATE: 'CREATE',
-    UPDATE: 'UPDATE',
-    DELETE: 'DELETE',
-    FETCH_ALL: 'FETCH_ALL'
-}
+import api from '../api';
 
-const formateData = data => ({
+
+const formatData = data => ({
     ...data,
     age: parseInt(data.age ? data.age : 0)
 })
@@ -16,19 +12,19 @@ export const fetchAll = () => dispatch => {
     api.dCandidate().fetchAll()
         .then(response => {
             dispatch({
-                type: ACTION_TYPES.FETCH_ALL,
+                type: actionTypes.FETCH_ALL,
                 payload: response.data
-            })
+            });
         })
-        .catch(err => console.log(err))
-}
+        .catch(err => console.log(err));
+};
 
 export const create = (data, onSuccess) => dispatch => {
-    data = formateData(data)
+    data = formatData(data)
     api.dCandidate().create(data)
         .then(res => {
             dispatch({
-                type: ACTION_TYPES.CREATE,
+                type: actionTypes.CREATE,
                 payload: res.data
             })
             onSuccess()
@@ -37,11 +33,11 @@ export const create = (data, onSuccess) => dispatch => {
 }
 
 export const update = (id, data, onSuccess) => dispatch => {
-    data = formateData(data)
+    data = formatData(data)
     api.dCandidate().update(id, data)
         .then(res => {
             dispatch({
-                type: ACTION_TYPES.UPDATE,
+                type: actionTypes.UPDATE,
                 payload: { id, ...data }
             })
             onSuccess()
@@ -53,7 +49,7 @@ export const Delete = (id, onSuccess) => dispatch => {
     api.dCandidate().delete(id)
         .then(res => {
             dispatch({
-                type: ACTION_TYPES.DELETE,
+                type: actionTypes.DELETE,
                 payload: id
             })
             onSuccess()
