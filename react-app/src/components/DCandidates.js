@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions/dCandidate";
+import * as actions from "../store/actions";
 import { Grid, Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, withStyles, ButtonGroup, Button } from "@material-ui/core";
 import DCandidateForm from "./DCandidateForm";
 import EditIcon from "@material-ui/icons/Edit";
@@ -27,13 +27,13 @@ const DCandidates = ({ classes, ...props }) => {
     useEffect(() => {
         props.fetchAllDCandidates()
     }, [])//componentDidMount
-    
+
     //toast msg.
     const { addToast } = useToasts()
 
     const onDelete = id => {
         if (window.confirm('Are you sure to delete this record?'))
-            props.deleteDCandidate(id,()=>addToast("Deleted successfully", { appearance: 'info' }))
+            props.deleteDCandidate(id, () => addToast("Deleted successfully", { appearance: 'info' }))
     }
     return (
         <Paper className={classes.paper} elevation={3}>
