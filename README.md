@@ -8,7 +8,7 @@ Points discussed
 - Enabled CORS in Web API
 - Consume API web methods from React
 - Real-Time Form Validation
-- etc
+
 
 ## Get the Code
 
